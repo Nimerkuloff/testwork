@@ -203,12 +203,12 @@ def test_user_can_delete_one_digit():
     mgr.app.Калькулятор.Button17.click()
 
     mgr.app.Калькулятор.Button7.click()
-    assert mgr.app.Калькулятор.Edit.window_text() == "12", "CLEAR NOT PERFOMED"
+    assert mgr.app.Калькулятор.Edit.window_text() == "12", "DELETE DIGIT NOT PERFOMED"
 
     mgr.close_app()
 
 @pytest.mark.xfail
-def test_user_can_press_clear_6_times():
+def test_user_can_perform_clear_6_times():
     mgr = PyWinAuto()
     for i in range(10):
         mgr.app.Калькулятор.Button19.click()
